@@ -11,3 +11,4 @@ def count_balance(string: str):
 
 count_balance("ASAASSASAS")
 count_balance("AAASSSA")
+count_balance("AAASSSAASASAS")
