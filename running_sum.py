@@ -20,7 +20,7 @@ def running_sum(some_list: list):
             tmp=0
             new_list=[]
             for i in some_list:
-                tmp++i # == to tmp=tmp+i
+                tmp++i # ==  tmp=tmp+i
                 new_list.append(tmp)
             print(new_list)
             return new_list
