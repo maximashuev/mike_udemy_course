@@ -1,14 +1,19 @@
-def count_balance(string: str):
-    print(string)
-    res, count = 0, 0
-    for c in string:
-        count += 1 if c == string[0] else -1
-        if count == 0:
-            res += 1
-    print(res)
-    return res
 
+
+def count_balance(string: str):
+    score = 0
+    c = 0
+    rng = range(len(string))
+    for i in rng:
+        if string[i] == string[0]:
+            score += 1
+        else:
+            score += -1
+        if score == 0:
+            c += 1
+    print(c)
+    return c
 
 count_balance("ASAASSASAS")
-count_balance("AAASSSA")
-count_balance("AAASSSAASASAS")
+count_balance("AAASSAA")
+count_balance("ASSAASSSAASASAS")
