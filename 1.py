@@ -24,3 +24,5 @@ print(a)
 
 s = "Привет, %s {}!".format("Николай")
 print(s)
+
+dfghdfgdf
