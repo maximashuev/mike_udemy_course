@@ -1,0 +1,4 @@
+def count_words_in_file(filename: str, word: str):
+    with open(filename,"r") as f:
+        data=f.read()
+    print(data)
