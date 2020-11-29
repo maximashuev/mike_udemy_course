@@ -19,7 +19,6 @@ class SQL_BASE():
     def verify_username(conection, username):
         cursor = conection.cursor()
         username_from_data= cursor.execute("SELECT username FROM data WHERE username =(?)", (username,)).fetchall()
-        # print("Existing customer:",(username_from_data[0][0]))
         return (username_from_data[0][0])
 
     def verify_password(conection,username):

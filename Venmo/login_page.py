@@ -36,7 +36,7 @@ class Login(SQL_BASE):
 
 
         except:
-            pass
+
             print("Customer with such username is not exist.")
             Login.login_username(self)
         return self.get_username
