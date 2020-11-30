@@ -25,7 +25,7 @@ class MainManu():
                 print("")
                 print("Account username is incorrect.")
                 print("^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^")
-                MainManu.main_menu(self)
+                self.main_menu()
         elif action=="6":
             print("Have a good day.")
             quit()
@@ -33,7 +33,7 @@ class MainManu():
             print("")
             print("This feature is under development.")
             print("^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^")
-            MainManu.main_menu(self)
+            self.main_menu()
 
 
 
