@@ -1,0 +1,10 @@
+# Default ignored files
+/workspace.xml
+/__pycache__
+Venmo/__pycache__/
+/.idea
+/Venmo/__pycache__
+Venmo/.DS_Store
+/Venmo/.DS_Store
+.DS_Store
+
