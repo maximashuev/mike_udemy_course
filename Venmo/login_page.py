@@ -1,6 +1,6 @@
 from Venmo.sql_base import SQL_BASE
 
-class Login(SQL_BASE):
+class Login():
     def __init__(self):
         self.username= "+++++"
         self.password="-----"
@@ -20,7 +20,7 @@ class Login(SQL_BASE):
         con = SQL_BASE.get_connection(self)
         self.username = input("Create username:")
         try:
-            assert self.username == SQL_BASE.verify_username(self.get_connection(), self.username)
+            assert self.username == SQL_BASE.verify_username(SQL_BASE.get_connection(self), self.username)
             print("Customer with given username already exist.\nPlease enter different username.")
             self.create_account()
         except:
@@ -32,17 +32,16 @@ class Login(SQL_BASE):
     def login_username(self):
         self.username = input("Enter Username:")
         try:
-            assert self.username == SQL_BASE.verify_username(self.get_connection(), self.username)
+            assert self.username == SQL_BASE.verify_username(SQL_BASE.get_connection(self), self.username)
             self.login_password()
         except:
             print("Customer with such username is not exist.")
             self.login_username()
-        # return self.username
 
     def login_password(self):
         self.password = input("Enter Password:")
         try:
-            assert self.password == SQL_BASE.verify_password(self.get_connection(), self.username)
+            assert self.password == SQL_BASE.verify_password(SQL_BASE.get_connection(self), self.username)
             print("Logged In successfully.Hello,{}.".format(self.username))
         except:
             print("Password is incorrect")
